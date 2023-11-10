@@ -7,6 +7,7 @@ SELECT id, employer, name, skills FROM job;
 SELECT name
 FROM employer
 WHERE location = "St. Louis City";
+
 --Part 3
 
 --Part 4
