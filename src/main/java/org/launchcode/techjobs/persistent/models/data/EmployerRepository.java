@@ -1,9 +1,14 @@
 package org.launchcode.techjobs.persistent.models.data;
 
+import org.launchcode.techjobs.persistent.models.Employer;
 import org.launchcode.techjobs.persistent.models.Job;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
-public interface EmployerRepository extends CrudRepository<Job, Integer> {
+public interface EmployerRepository extends CrudRepository<Employer, Integer> {
+    Optional<Employer> findAllOrderByName(String name);
+    Optional<Employer> findAllById(int employerId);
 }
