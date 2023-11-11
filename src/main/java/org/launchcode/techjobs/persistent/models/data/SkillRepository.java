@@ -6,10 +6,10 @@ import org.launchcode.techjobs.persistent.models.Skill;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
 public interface SkillRepository extends CrudRepository<Skill, Integer> {
-    Optional<Skill> findAllOrderByName(String name);
-    Optional<Skill> findAllById(int skillId);
+    Iterable<Employer> findAllOrderByName(String name);
 }
