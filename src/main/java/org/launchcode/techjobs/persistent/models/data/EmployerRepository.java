@@ -9,6 +9,4 @@ import java.util.Optional;
 
 @Repository
 public interface EmployerRepository extends CrudRepository<Employer, Integer> {
-    Optional<Employer> findAllOrderByName(String name);
-    Optional<Employer> findById(int employerId);
 }

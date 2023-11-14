@@ -34,9 +34,9 @@ public class HomeController {
 
     @RequestMapping("/")
     public String index(Model model) {
-
-        model.addAttribute("title", "MyJobs");
-
+        model.addAttribute("title", "All Jobs");
+        List<Job> jobs = (List<Job>) jobRepository.findAll();
+        model.addAttribute("jobs", jobs);
         return "index";
     }
 
